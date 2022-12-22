@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Review book</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid myNavBar">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img src="/images/logo2.png" alt="logo" id="logoImg">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown custom-navbar">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                CATEGORY
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="d-flex">
+                                    <div>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Art</a>
+                                        <a class="dropdown-item" href="#">Business</a>
+                                        <a class="dropdown-item" href="#">Cooking</a>
+                                    </div>
+                                    <div>
+                                        <a class="dropdown-item" href="#">Kid</a>
+                                        <a class="dropdown-item" href="#">History</a>
+                                        <a class="dropdown-item" href="#">Horror</a>
+                                        <a class="dropdown-item" href="#">Medical</a>
+                                    </div>
+                                    <div>
+                                        <a class="dropdown-item" href="#">Novel</a>
+                                        <a class="dropdown-item" href="#">Science</a>
+                                        <a class="dropdown-item" href="#">Romance</a>
+                                        <a class="dropdown-item" href="#">Tech</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown custom-navbar">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                ABOUT US
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="d-flex">
+                                    <div>
+                                        <a class="dropdown-item" href="#">Lorem</a>
+                                        <a class="dropdown-item" href="#">Lorem, ipsum.</a>
+                                    </div>
+                                    <div>
+                                        <a class="dropdown-item" href="#">Team member</a>
+                                        <a class="dropdown-item" href="#">Contact</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <div><a href="/login" target="_self"><button class="btn btn-info m-2">Login</button> </a> </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <div class="banner contained-fluid">
+        <img src="/images/banner2.jpg" alt="banner">
+        <div class="banner-bot d-flex">
+            <div>
+                <h3>Lorem ipsum dolor sit.</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div>
+                <h3>Lorem ipsum dolor sit.</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </div>
+    <div class="carousel">
+        <h4 class="carousel-header" id="reccomend">Recommend:</h4>
+        <div class="owl-carousel top-carousel">
+            <% for(var i=0; i < dataUser.length; i++) { %>
+                <% if((dataUser[i].review.substring (0,dataUser[i].review.length - 3))>=7.5){%>
+                    <div class="card carousel-card" style="width: 18rem; height: 40rem;">
+                        <img src="<%=dataUser[i].Imgsrc%>" class="card-img-top" alt="<%=dataUser[i].name%>">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=dataUser[i].name%>
+                            </h5>
+                            <p class="">Author: <%=dataUser[i].author%>
+                            </p>
+                            <p>
+                                Review: <%=dataUser[i].review%>
+                            </p>
+                            <div class="btn-card">
+                                <a href="#recommend" class="btn btn-success text-center">See more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <% } %>
+                        <% } %>
+        </div>
+    </div>
+    <div id="new">
+        <h4>New:</h4>
+        <% for(var i=dataUser.length - 1; i> (dataUser.length - 3); i--) { %>
+            <div class="card mb-3 viewing-card">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="<%=dataUser[i].Imgsrc%>" class="card-img" alt="<%=dataUser[i].bookName%>"">
+                  </div>
+                  <div class=" col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=dataUser[i].bookName%>
+                            </h5>
+                            <p class="card-text">Author: <%=dataUser[i].author%>
+                            </p>
+                            <p class="card-text">Status: <%=dataUser[i].bookStatus%>
+                            </p>
+                            <p>
+                                <% for(j=1; j <=(Math.round ( (dataUser[i].review.substring (0,dataUser[i].review.length
+                                    - 3) /2)));j++) {%>
+                                    <i class="fa fa-star text-warning"></i>
+                                    <%}%>
+                                        <% for(j=1; j <=5 - (Math.round ( (dataUser[i].review.substring
+                                            (0,dataUser[i].review.length - 3) /2)));j++) {%>
+                                            <i class="fa fa-star text-secondaryg"></i>
+                                            <%}%>
+
+                            </p>
+                            <p class="card-text text-justify">
+                                <% if(dataUser[i].summary.length> 800){ %>
+                                    <%= (dataUser[i].summary.slice(0, 800) + "..." ) %>
+                                        <%} else {%>
+                                            <%= dataUser[i].summary%>
+                                                <%}%>
+                            </p>
+                            <div class="btn-card">
+                                <a href="#new" class="btn btn-success text-center">See more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <% } %>
+    </div>
+    <div id="category" class="d-flex">
+        <div class="category-left col-2">
+            <h4>Category:</h4>
+            <ul>
+                <li>
+                    <a id="Action" class="cate-active" href="#category"><i class="fa fa-caret-right mr-3"></i>Action</a>
+                </li>
+                <li>
+                    <a id="Art" href="#category"><i class="fa fa-caret-right mr-3"></i>Art</a>
+                </li>
+                <li>
+                    <a id="Business" href="#category"><i class="fa fa-caret-right mr-3"></i>Business</a>
+                </li>
+                <li>
+                    <a id="Cooking" href=""><i class="fa fa-caret-right mr-3"></i>Cooking</a>
+                </li>
+                <li>
+                    <a id="Kid" href=""><i class="fa fa-caret-right mr-3"></i>Kid</a>
+                </li>
+                <li>
+                    <a id="History" href=""><i class="fa fa-caret-right mr-3"></i>History</a>
+                </li>
+                <li>
+                    <a id="Horror" href=""><i class="fa fa-caret-right mr-3"></i>Horror</a>
+                </li>
+                <li>
+                    <a id="Medical" href=""><i class="fa fa-caret-right mr-3"></i>Medical</a>
+                </li>
+                <li>
+                    <a id="Novel" href=""><i class="fa fa-caret-right mr-3"></i>Novel</a>
+                </li>
+                <li>
+                    <a id="Science" href=""><i class="fa fa-caret-right mr-3"></i>Science</a>
+                </li>
+                <li>
+                    <a id="Romance" href=""><i class="fa fa-caret-right mr-3"></i>Romance</a>
+                </li>
+                <li>
+                    <a id="Tech" href=""><i class="fa fa-caret-right mr-3"></i>Tech</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="category-right col-10">
+            <div class="d-flex">
+                <%let regex=/action/;%>
+                    <% for (i=0; i < dataUser.length; i++) {%>
+                        <% if (regex.test(dataUser[i].category.toLowerCase())) {%>
+                            <a href="" class=" cate-link">
+                                <div class="card cate-card" style="width: 10.1rem; height: 21rem;">
+                                    <img src="<%=dataUser[i].Imgsrc%>" class="card-img-top"
+                                        alt="<%=dataUser[i].bookName%> " style="height: 256px; width: 169px;">
+                                    <div class="card-body">
+                                        <p class="text-center">
+                                            <%=dataUser[i].bookName%>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <%}%>
+                                <%}%>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="d-flex" id="footer">
+            <div class="footer-left text-center">
+                <img src="/images/logo2.png" alt="" srcset="">
+                <p>Lorem, ipsum dolor.</p>
+            </div>
+            <div>
+                <h5 class="text-center">
+                    Lorem ipsum dolor sit amet.
+                    <br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing.
+                </h5>
+            </div>
+            <div class="footer-right">
+                <a href="#footer">Lorem</a>
+                <a href="#footer">Lorem</a>
+                <a href="#footer"><i class="fab fa-facebook"></i></a>
+                <a href="#footer"><i class="fab fa-twitter"></i></a>
+                <a href="#footer"><i class="fa fa-envelope"></i></a>
+                <a href="#footer"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="/js/owl.carousel.js"></script>
+    <script src="/js/main.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".top-carousel").owlCarousel({
+                loop: true,
+                nav: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                        margin: 5
+                    },
+                    600: {
+                        items: 2,
+                        margin: 10
+                    },
+                    1000: {
+                        items: 3,
+                        margin: 30
+                    },
+                    1450: {
+                        items: 4,
+                        margin: 10
+                    }
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

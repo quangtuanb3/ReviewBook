@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html
+    class="js sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers"
+    lang="">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Admin Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/img/favicon.png">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="/adminPage/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/adminPage/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/adminPage/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <!-- <link rel="stylesheet" href="/adminPage/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/adminPage/flaticon.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="/adminPage/animate.min.css">
+    <!-- Data Table CSS -->
+    <link rel="stylesheet" href="/adminPage/jquery.dataTables.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/adminPage/style.css">
+    <!-- Modernize js -->
+    <script src="/adminPage/modernizr-3.6.0.min.js.tải xuống"></script>
+    <style type="text/css">
+        /* Chart.js */
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader Start Here -->
+
+    <!-- Preloader End Here -->
+    <div id="wrapper" class="wrapper bg-ash">
+        <!-- Header Menu Area Start Here -->
+        <div class="navbar navbar-expand-md header-menu-one bg-light">
+            <div class="nav-bar-header-one">
+                <div class="header-logo">
+                    <a href="/">
+                        <img src="/images/logo2.png" alt="logo" width="80px">
+                    </a>
+                </div>
+                <div class="toggle-button sidebar-toggle">
+                    <button type="button" class="item-link">
+                        <span class="btn-icon-wrap">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="d-md-none mobile-nav-bar">
+                <button class="navbar-toggler pulse-animation" type="button" data-toggle="collapse"
+                    data-target="#mobile-navbar" aria-expanded="false">
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                </button>
+                <button type="button" class="navbar-toggler sidebar-toggle-mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="header-main-menu collapse navbar-collapse" id="mobile-navbar">
+                <ul class="navbar-nav">
+                    <li class="navbar-item header-search-bar">
+                        <div class="input-group stylish-input-group">
+                            <span class="input-group-addon">
+                                <button type="submit">
+                                    <span> <i class="fa fa-search"></i></span>
+                                </button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Find Something . . .">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="navbar-item dropdown header-admin">
+                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            <div class="admin-title">
+                                <h5 class="item-title text-center">QT</h5>
+                                <span>Admin</span>
+                            </div>
+                            <div class="admin-img">
+                                <img src="/adminPage/admin.jpg" alt="Admin">
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="item-header">
+                                <h6 class="item-title">QT</h6>
+                            </div>
+                            <div class="item-content">
+                                <ul class="settings-list">
+                                    <li><a href="#"><i class="fa fa-user-circle"></i></i>My Profile</a></li>
+                                    <li><a href="#"><i class="fa fa-tasks"></i>Task</a></li>
+                                    <li><a href="#"><i class="fa fa-comment"></i>Message</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-cog"></i>Account Settings</a></li>
+                                    <li><a href="#"><i class="fa fa-power-off"></i></i>Log Out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navbar-item dropdown header-message">
+                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="far fa-envelope"></i>
+                            <div class="item-title d-md-none text-16 mg-l-10">Message</div>
+                            <span>5</span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="item-header">
+                                <h6 class="item-title">05 Message</h6>
+                            </div>
+                            <div class="item-content">
+                                <div class="media">
+                                    <div class="item-img bg-skyblue author-online">
+                                        <img src="./student11.png" alt="img">
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="item-title">
+                                            <a href="#">
+                                                <span class="item-name">Maria Zaman</span>
+                                                <span class="item-time">18:30</span>
+                                            </a>
+                                        </div>
+                                        <p>What is the reason of buy this item.
+                                            Is it usefull for me.....</p>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="item-img bg-yellow author-online">
+                                        <img src="./student12.png" alt="img">
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="item-title">
+                                            <a href="#">
+                                                <span class="item-name">Benny Roy</span>
+                                                <span class="item-time">10:35</span>
+                                            </a>
+                                        </div>
+                                        <p>What is the reason of buy this item.
+                                            Is it usefull for me.....</p>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="item-img bg-pink">
+                                        <img src="./student13.png" alt="img">
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="item-title">
+                                            <a href="#">
+                                                <span class="item-name">Steven</span>
+                                                <span class="item-time">02:35</span>
+                                            </a>
+                                        </div>
+                                        <p>What is the reason of buy this item.
+                                            Is it usefull for me.....</p>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="item-img bg-violet-blue">
+                                        <img src="./student11.png" alt="img">
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="item-title">
+                                            <a href="#">
+                                                <span class="item-name">Joshep Joe</span>
+                                                <span class="item-time">12:35</span>
+                                            </a>
+                                        </div>
+                                        <p>What is the reason of buy this item.
+                                            Is it usefull for me.....</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navbar-item dropdown header-notification">
+                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="far fa-bell"></i>
+                            <div class="item-title d-md-none text-16 mg-l-10">Notification</div>
+                            <span>8</span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="item-header">
+                                <h6 class="item-title">03 Notifiacations</h6>
+                            </div>
+                            <div class="item-content">
+                                <div class="media">
+                                    <div class="item-icon bg-skyblue">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="post-title">Complete Today Task</div>
+                                        <span>1 Mins ago</span>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="item-icon bg-orange">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="post-title">Director Metting</div>
+                                        <span>20 Mins ago</span>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="item-icon bg-violet-blue">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <div class="post-title">Update Password</div>
+                                        <span>45 Mins ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navbar-item dropdown header-language">
+                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false"><i class="fas fa-globe-americas"></i>EN</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">English</a>
+                            <a class="dropdown-item" href="#">Spanish</a>
+                            <a class="dropdown-item" href="#">Franchis</a>
+                            <a class="dropdown-item" href="#">Chiness</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Header Menu Area End Here -->
+        <!-- Page Area Start Here -->
+        <div class="dashboard-page-one">
+            <!-- Sidebar Area Start Here -->
+            <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
+                <div class="mobile-sidebar-header d-md-none">
+                    <div class="header-logo">
+                        <a href="/"><img src="./logo1.png" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="sidebar-menu-content">
+                    <ul class="nav nav-sidebar-menu sidebar-toggle-view">
+                        <li class="nav-item ">
+                            <a href="/adminPage" class="nav-link after-nav-link"><i
+                                    class="fa fa-book-reader"></i></i>Library</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link after-nav-link"><i class="fa fa-users"></i><span>User</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="fa fa-tasks"></i></i><span>Notice</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="fa fa-comments"></i></i><span>Messeage</span></a>
+                        </li>
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="fab fa-elementor"></i></i><span>UI
+                                    Elements</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Button</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Grid</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Modal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Progress Bar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Tab</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fas fa-angle-right"></i>Widget</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <!-- Sidebar Area End Here -->
+            <div class="dashboard-content-one">
+                <!-- Breadcubs Area Start Here -->
+                <div class="breadcrumbs-area">
+                    <h3>Library</h3>
+
+                </div>
+                <!-- Breadcubs Area End Here -->
+                <div class="row">
+                    <!-- Dashboard summery Start Here -->
+                    <div class="col-12 col-4-xxxl">
+                        <div class="row">
+                            <div class="col-6-xxxl col-lg-3 col-sm-6 col-12">
+                                <div class="dashboard-summery-two">
+                                    <div class="item-icon bg-light-magenta">
+                                        <i class="fa fa-book"></i>
+                                    </div>
+                                    <div class="item-content">
+                                        <div class="item-number"><span class="counter" data-num="35000">35000</span>
+                                        </div>
+                                        <div class="item-title">Total book</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6-xxxl col-lg-3 col-sm-6 col-12">
+                                <div class="dashboard-summery-two">
+                                    <div class="item-icon bg-light-blue">
+                                        <i class="fa fa-user-friends"></i>
+                                    </div>
+                                    <div class="item-content">
+                                        <div class="item-number"><span class="counter" data-num="19050">29050</span>
+                                        </div>
+                                        <div class="item-title">Total view</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6-xxxl col-lg-3 col-sm-6 col-12">
+                                <div class="dashboard-summery-two">
+                                    <div class="item-icon bg-light-yellow">
+                                        <i class="fa fa-comments"></i>
+                                    </div>
+                                    <div class="item-content">
+                                        <div class="item-number"><span class="counter" data-num="23890">21890</span>
+                                        </div>
+                                        <div class="item-title">Total comment</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6-xxxl col-lg-3 col-sm-6 col-12">
+                                <div class="dashboard-summery-two">
+                                    <div class="item-icon bg-light-red">
+                                        <i class="fa fa-dollar-sign"></i>
+                                    </div>
+                                    <div class="item-content">
+                                        <div class="item-number"><span>$</span><span class="counter"
+                                                data-num="2102050">2102050</span></div>
+                                        <div class="item-title">Total Income</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dashboard summery End Here -->
+
+
+                </div>
+                <!-- Student Table Area Start Here -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card dashboard-card-eleven">
+                            <div class="card-body">
+                                <div class="heading-layout1">
+                                    <div class="item-title">
+                                        <h3>Bookshelf</h3>
+                                    </div>
+                                    <div>
+                                        <a href="/add-book"><button class="btn btn-info t"
+                                                style="font-size: 16px; font-weight: bold; padding: 10px 13px; border-radius: 5px;">ADD
+                                                NEW BOOK</button></a>
+                                    </div>
+                                </div>
+                                <div class="table-box-wrap">
+                                    <form class="search-form-box">
+                                        <div class="row gutters-8">
+                                            <div class="col-3-xxxl col-xl-3 col-lg-3 col-12 form-group">
+                                                <input type="text" placeholder="Search by Name ..."
+                                                    class="form-control">
+                                            </div>
+                                            <div class="col-4-xxxl col-xl-4 col-lg-4 col-12 form-group">
+                                                <input type="text" placeholder="Search by Category ..."
+                                                    class="form-control">
+                                            </div>
+                                            <div class="col-4-xxxl col-xl-3 col-lg-3 col-12 form-group">
+                                                <input type="text" placeholder="Search by Author ..."
+                                                    class="form-control">
+                                            </div>
+                                            <div class="col-1-xxxl col-xl-2 col-lg-2 col-12 form-group">
+                                                <button type="submit"
+                                                    class="fw-btn-fill btn-gradient-yellow">SEARCH</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- ////////////fix here -->
+                                    <div class="table-responsive student-table-box">
+                                        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
+                                            <table class="table display data-table text-nowrap dataTable no-footer"
+                                                id="DataTables_Table_0" role="grid">
+                                                <thead>
+                                                    <tr role="row">
+                                                        <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                            aria-label="id" style="width: 85.7954px;">
+                                                            <div class="form-check">
+                                                                <input type="checkbox"
+                                                                    class="form-check-input checkAll">
+                                                                <label class="form-check-label">Id</label>
+                                                            </div>
+                                                        </th>
+
+                                                        <th class="sorting text-center" tabindex="0"
+                                                            aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                                                            aria-label="bookName: activate to sort column ascending"
+                                                            style="width: 80.6818px;">Book Name</th>
+                                                        <th class="sorting text-center" tabindex="0"
+                                                            aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                                                            aria-label="category: activate to sort column ascending"
+                                                            style="width: 51.6193px;">Category</th>
+                                                        <th class="sorting text-center" tabindex="0"
+                                                            aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                                                            aria-label="author: activate to sort column ascending"
+                                                            style="width: 39.7064px;">Author</th>
+                                                        <th class="sorting text-center" tabindex="0"
+                                                            aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                                                            aria-label="review: activate to sort column ascending"
+                                                            style="width: 54.0341px;">Review</th>
+
+                                                        <th class="text-center"> Action</th>
+                                                    </tr>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <%for (i=0; i< dataUser.length; i++){%>
+                                                        <tr role="row" class="odd">
+                                                            <td class="">
+                                                                <div class="form-check">
+                                                                    <input type="checkbox" class="form-check-input">
+                                                                    <label class="form-check-label">
+                                                                        <%=dataUser[i].id%>
+                                                                    </label>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <%=dataUser[i].bookName%>
+                                                            </td>
+                                                            <td>
+                                                                <%=dataUser[i].category%>
+                                                            </td>
+                                                            <td>
+                                                                <%=dataUser[i].author%>
+                                                            </td>
+                                                            <td>
+                                                                <%=dataUser[i].review%>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <form action="/editPage/<%=dataUser[i].id%>"
+                                                                        method="GET" style="margin: 10px 15px;">
+                                                                        <button type="submit" class="btn btn-primary"
+                                                                            style="font-size: 15px; padding: 5px 10px;width: 65px;">Edit</button>
+                                                                    </form>
+                                                                    <form action="/delete-book" method="post"
+                                                                        style="margin: 10px 15px;">
+                                                                        <input type="text" hidden
+                                                                            value="<%=dataUser[i].id%>" name="bookID">
+                                                                        <button type="submit" class="btn btn-danger"
+                                                                            style="font-size: 15px;  padding: 5px 10px;">Delete</button>
+                                                                    </form>
+                                                                </div>
+
+                                                            </td>
+                                                        </tr>
+                                                        <%}%>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Student Table Area End Here -->
+                <footer class="footer-wrap-layout1">
+                    <div class="copyright">© Copyrights <a href="#">QT</a>
+                        2022. All rights reserved. Designed by <a href="#">PsdBosS</a>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+        <!-- Page Area End Here -->
+    </div>
+    <!-- jquery-->
+    <script src="/adminPage/jquery-3.3.1.min.js.tải xuống"></script>
+    <!-- Plugins js -->
+    <script src="/adminPage/plugins.js.tải xuống"></script>
+    <!-- Popper js -->
+    <script src="/adminPage/popper.min.js.tải xuống"></script>
+    <!-- Bootstrap js -->
+    <script src="/adminPage/bootstrap.min.js.tải xuống"></script>
+    <!-- Counterup Js -->
+    <script src="/adminPage/jquery.counterup.min.js.tải xuống"></script>
+    <!-- Waypoints Js -->
+    <script src="/adminPage/jquery.waypoints.min.js.tải xuống"></script>
+    <!-- Scroll Up Js -->
+    <script src="/adminPage/jquery.scrollUp.min.js.tải xuống"></script>
+    <!-- Data Table Js -->
+    <script src="/adminPage/jquery.dataTables.min.js.tải xuống"></script>
+    <!-- Chart Js -->
+    <script src="/adminPage/Chart.min.js.tải xuống"></script>
+    <!-- Custom Js -->
+    <script src="/adminPage/main.js.tải xuống"></script><a id="scrollUp" href="#"
+        style="position: fixed; z-index: 2147483647;"><i class="fa fa-angle-up"></i></a>
+
+
+
+</body>
+
+</html>
