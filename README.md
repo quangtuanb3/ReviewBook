@@ -3,3 +3,5 @@ Fllow below step to run project:
 2. Open XAMPP, Start Apache and MySQL 
 3. Open phpAdmin (http://localhost/phpmyadmin/) and Import /nodejsbasic.sql
 4. Open VSCode, enter 'npm start' in terminal windows
+Usename: admin
+Password: admin1
